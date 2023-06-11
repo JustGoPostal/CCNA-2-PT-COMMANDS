@@ -29,8 +29,11 @@ crypto key generate rsa
 ip ssh version 2
 
 line vty 0 15
+
 login local
+
 transport input ssh
+
 exit
 
 interface Loopback 0
@@ -182,15 +185,23 @@ exit
 ip default-gateway 10.19.8.97
 
 vlan 2
+
 name Bikes
+
 vlan 3
+
 name Trikes
+
 vlan 4
 
 name Management
+
 vlan 5
+
 name Parking
+
 vlan 6
+
 name Native
 
 interface range f0/1-2
@@ -250,45 +261,77 @@ Switch S2:
 
 
 enable
-configure terminal 
+
+configure terminal
+
 no ip domain lookup
+
 hostname S2
+
 banner motd #Unauthorized Access is Prohibitted!#
 
+
 line console 0
+
 password ciscoconpass
+
 login
+
 exit
 
 enable secret ciscoenpass
+
 service password-encryption 
 
 username admin secret admin1pass
+
 ip domain name ccna-ptsa.com
+
 crypto key generate rsa
+
 1024
+
 ip ssh version 2
+
 line vty 0 15
+
 login local
+
 transport input ssh
+
 exit
+
 interface vlan 4
 
+
 ip address 10.19.8.99 255.255.255.248
+
 description Management Interface
+
 no shutdown
+
 exit
+
 ip default-gateway 10.19.8.97
 
 vlan 2
+
 name Bikes
+
 vlan 3
+
 name Trikes
+
 vlan 4
+
 name Management
+
 vlan 5
+
 name Parking
+
 vlan 6
+
 name Native
 
 interface range f0/1-2
