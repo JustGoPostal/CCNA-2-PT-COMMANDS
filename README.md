@@ -162,15 +162,23 @@ crypto key generate rsa
 ip ssh version 2
 
 line vty 0 15
+
 login local
+
 transport input ssh
+
 exit
 
 interface vlan 4
+
 ip address 10.19.8.98 255.255.255.248
+
 description Management Interface
+
 no shutdown
+
 exit
+
 ip default-gateway 10.19.8.97
 
 vlan 2
