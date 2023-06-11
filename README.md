@@ -131,33 +131,56 @@ vlan 6
 name Native
 
 interface range f0/1-2
+
 switchport mode trunk
+
 switchport trunk native vlan 6
+
 switchport trunk allowed vlan 2,3,4,5,6
+
 exit
 
 interface f0/5
+
 switchport mode trunk
+
 switchport trunk native vlan 6
+
 switchport trunk allowed vlan 2,3,4,5,6
+
 exit
+
 interface range f0/1-2
+
 channel-group 1 mode active
+
 interface port-channel 1
+
 exit
 
 interface f0/6
+
 description host
+
 switchport mode access 
+
 switchport access vlan 2
+
 switchport port-security
+
 switchport port-security maximum 3
 
+
 interface range f0/3-4, f0/7-24, g0/1-2
+
 switchport mode access 
+
 switchport access vlan 5
+
 description Unused Interfaces
+
 shutdown
+
 
 
 Switch S2:
@@ -206,21 +229,39 @@ vlan 6
 name Native
 
 interface range f0/1-2
+
 switchport mode trunk 
+
 switchport trunk native vlan 6
+
 switchport trunk allowed vlan 2,3,4,5,6
+
 exit
+
 interface range f0/1-2
+
 channel-group 1 mode active
+
 interface port-channel 1
+
 exit
+
 interface f0/18
+
 switchport mode access
+
 switchport access vlan 3
+
 switchport port-security
+
 switchport port-security maximum 3
+
 interface range f0/3-17, f0/19-24, g0/1-2
+
 switchport mode access
+
 switchport access vlan 5
+
 description Unused Interfaces
+
 shutdown
