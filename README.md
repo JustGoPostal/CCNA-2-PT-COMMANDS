@@ -13,12 +13,17 @@ login
 exit
 
 enable secret ciscoenpass
+
 service password-encryption
+
 security passwords min-length 10
 
 username admin secret admin1pass
+
 ip domain name ccna-ptsa.com
+
 crypto key generate rsa
+
 1024
 
 ip ssh version 2
@@ -98,10 +103,15 @@ password ciscoconpass
 login
 exit
 enable secret ciscoenpass
+
 service password-encryption 
+
 username admin secret admin1pass
+
 ip domain name ccna-ptsa.com
+
 crypto key generate rsa
+
 1024
 
 ip ssh version 2
